@@ -1,3 +1,4 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 class Usuario{
@@ -12,16 +13,34 @@ public class Main {
         int tent_login = 0;
         int op = 0; 
         String usuario;
-        int senha;
+        int senha = 0;
         boolean loginSucesso = false;
+
+        //parte do login
 
         while (tent_login < 3) {
             System.out.println("Digite seu login:");
             usuario = ler.nextLine();
-            System.out.println("Digite sua senha (Apenas números):");
-            senha = ler.nextInt();
-            ler.nextLine();
+            boolean senhaValida = false;
 
+            // loop pra verificar senha
+            while (!senhaValida) {
+                System.out.println("Digite sua senha (Apenas números):");
+
+                try {
+                    senha = ler.nextInt();
+                    ler.nextLine();
+                    senhaValida = true;
+
+                } catch (InputMismatchException e) {
+                    System.out.println("Erro: Digite apenas números na senha.");
+                    ler.nextLine();
+                    System.out.println("");
+                }
+            }
+
+
+            //verificar se a senha e o usuario estão corretos
             if (usuario.equals(user.usuarioADMIN) && senha == user.senhaADMIN) {
                 System.out.println("Login realizado com sucesso!");
                 System.out.println("---------------------------------");
@@ -34,6 +53,8 @@ public class Main {
             }
         }
         
+        //parte do menu
+
         while(tent_login < 3 && loginSucesso) {
             System.out.println("");
             System.out.println("1. Configurar conexão (tipo, modelo, porta, parâmetro)");

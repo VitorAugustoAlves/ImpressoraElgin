@@ -1,7 +1,11 @@
 public class Main {
     public static void main(String[] args) {
         Login login = new Login();
-        Menu menu = new Menu();
+
+        Impressora impressora = new Impressora();
+        Menu menu = new Menu(impressora);
+
+
         System.out.println("Bem-vindo ao sistema de impressão da Elgin!");
         System.out.println("Grupo composto por: Vitor Teodósio, Gabriel Schultz, Hyago Bringel.");
         
@@ -13,8 +17,10 @@ public class Main {
         if (!loginSucesso) {
             System.out.println("Acesso negado. Encerrando o programa.");
         }
+
         while(loginSucesso) {
             int opcao= menu.exibirMenu();
+            
             if(opcao == 12){
                 System.out.println("Saindo do programa...");
                 break;

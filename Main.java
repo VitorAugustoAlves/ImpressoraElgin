@@ -20,9 +20,8 @@ public class Main {
 
         while(loginSucesso) {
             int opcao= menu.exibirMenu();
-            
+
             if(opcao == 12){
-                System.out.println("Saindo do programa...");
                 break;
             }
         }

@@ -4,11 +4,9 @@ Projeto Elgin
 
 ## Sobre
 
-Este projeto foi desenvolvido por Gabriel Schultz, Hyago Bringel e Vitor Teodósio, alunos do colégio UNASP, para se comunicar com uma impressora térmica Elgin i9 utilizando a biblioteca `E1_Impressora01.dll`.
+Este projeto foi desenvolvido por Gabriel Schultz, Hyago Bringel e Vitor Teodósio, alunos do colégio UNASP, para se comunicar com uma impressora Elgin i9. Feito para um projeto da disciplina de Programação Orientada a Objetos(POO) com objetivos acadêmicos.
 
 O sistema possui login e um menu com operações de impressão de texto, QR Code, código de barras, XML SAT e XML de cancelamento SAT. Também permite configurar a conexão, abrir a gaveta, emitir sinais sonoros, avançar e cortar o papel e consultar o status da impressora.
-
-O projeto faz parte da disciplina de Programação Orientada a Objetos.
 
 ---
 

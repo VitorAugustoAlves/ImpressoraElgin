@@ -192,5 +192,5 @@ Senha: 1234
 ## Autores
 
 - Gabriel Nogueira Schultz
-- Hyago Bringel
-- Vitor Augusto Teodósio
+- Hyago Bringel Pereira
+- Vitor Augusto Alves Teodósio

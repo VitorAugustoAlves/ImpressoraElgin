@@ -12,7 +12,7 @@ O sistema possui login e um menu com operações de impressão de texto, QR Code
 
 ## Tecnologias Utilizadas
 
-- Java 8 (1.8.0_351)
+- Java JDK27
 - Visual Studio Code
 - JNA 5.15.0
 - DLL E1_Impressora01

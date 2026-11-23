@@ -21,51 +21,51 @@ O sistema possui login e um menu com operações de impressão de texto, QR Code
 ---
 
 ## Estrutura do Projeto
-
+```
 /ImpressoraElgin-main
-│
-├── Main.java
-│   → Inicia o programa, cria os objetos e mantém o menu em execução.
-│
-├── Login.java
-│   → Solicita usuário e senha e controla as três tentativas de login.
-│
-├── Usuario.java
-│   → Armazena o usuário e a senha utilizados no login.
-│
-├── Menu.java
-│   → Exibe o menu, solicita os dados e valida as entradas do usuário.
-│
-├── Impressora.java
-│   → Controla a conexão e as operações realizadas pela impressora.
-│
-├── XMLSAT.xml
-│   → XML de exemplo utilizado para imprimir um cupom SAT.
-│
-├── CANC_SAT.xml
-│   → XML de exemplo utilizado para imprimir um cancelamento SAT.
-│
-├── /src
-│   └── ImpressoraDLL.java
-│       → Faz a comunicação entre o Java e a DLL da Elgin.
-│         Este arquivo não deve ser alterado.
-│
-├── /Bibliotecas E1 Impressora
-│   ├── /x64
-│   │   └── E1_Impressora01.dll
-│   │
-│   └── /x86
-│       └── E1_Impressora01.dll
-│       → DLLs da Elgin para sistemas de 64 e 32 bits.
-│
-├── /libs Java
-│   └── jna-5.15.0.jar
-│       → Biblioteca que permite ao Java utilizar as funções da DLL.
-│
-└── /.vscode
-    └── settings.json
-        → Configura o caminho da biblioteca JNA no Visual Studio Code.
-
+│  
+├── Main.java  
+│   → Inicia o programa, cria os objetos e mantém o menu em execução.  
+│  
+├── Login.java  
+│   → Solicita usuário e senha e controla as três tentativas de login.  
+│  
+├── Usuario.java  
+│   → Armazena o usuário e a senha utilizados no login.  
+│  
+├── Menu.java  
+│   → Exibe o menu, solicita os dados e valida as entradas do usuário.  
+│  
+├── Impressora.java  
+│   → Controla a conexão e as operações realizadas pela impressora.  
+│  
+├── XMLSAT.xml  
+│   → XML de exemplo utilizado para imprimir um cupom SAT.  
+│  
+├── CANC_SAT.xml  
+│   → XML de exemplo utilizado para imprimir um cancelamento SAT.  
+│  
+├── /src  
+│   └── ImpressoraDLL.java  
+│       → Faz a comunicação entre o Java e a DLL da Elgin.  
+│         Este arquivo não deve ser alterado.  
+│  
+├── /Bibliotecas E1 Impressora  
+│   ├── /x64  
+│   │   └── E1_Impressora01.dll  
+│   │  
+│   └── /x86  
+│       └── E1_Impressora01.dll  
+│       → DLLs da Elgin para sistemas de 64 e 32 bits.  
+│  
+├── /libs Java  
+│   └── jna-5.15.0.jar  
+│       → Biblioteca que permite ao Java utilizar as funções da DLL.  
+│  
+└── /.vscode  
+    └── settings.json  
+        → Configura o caminho da biblioteca JNA no Visual Studio Code.  
+```
 ---
 
 ## Instalação e Execução

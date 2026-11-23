@@ -84,6 +84,7 @@ public class Impressora {
 
         // ImpressaoTexto retorna a quantidade enviada; apenas valor negativo é erro.
         if (retorno >= 0) {
+            ImpressoraDLL.INSTANCE.Corte(5); // Avança 3 linhas após a impressão
             System.out.println("Texto enviado para impressão com sucesso.");
         } else {
             System.out.println("Erro ao imprimir texto. Código: " + retorno);
@@ -97,6 +98,7 @@ public class Impressora {
 
         mostrarResultado(ImpressoraDLL.INSTANCE.Corte(avanco), "Papel cortado com sucesso",
                 "Erro ao cortar o papel");
+        ImpressoraDLL.INSTANCE.Corte(5);
     }
 
     public void imprimirQRCode(String dados, int tamanho, int nivelCorrecao) {
@@ -107,6 +109,7 @@ public class Impressora {
         mostrarResultado(ImpressoraDLL.INSTANCE.ImpressaoQRCode(
                 dados, tamanho, nivelCorrecao), "QR Code impresso com sucesso",
                 "Erro ao imprimir QR Code");
+        ImpressoraDLL.INSTANCE.Corte(5);
     }
 
     public void imprimirCodigoBarras(int tipo, String dados, int altura, int largura, int hri) {
@@ -117,6 +120,7 @@ public class Impressora {
         mostrarResultado(ImpressoraDLL.INSTANCE.ImpressaoCodigoBarras(
                 tipo, dados, altura, largura, hri), "Código de barras impresso com sucesso",
                 "Erro ao imprimir código de barras");
+        ImpressoraDLL.INSTANCE.Corte(5);
     }
 
     public void imprimirXMLSAT(String caminhoArquivo) {
@@ -128,6 +132,7 @@ public class Impressora {
             String xml = lerArquivo(caminhoArquivo);
             mostrarResultado(ImpressoraDLL.INSTANCE.ImprimeXMLSAT(xml, 0),
                     "XML SAT impresso com sucesso", "Erro ao imprimir XML SAT");
+            ImpressoraDLL.INSTANCE.Corte(5);
         } catch (IOException e) {
             System.out.println("Não foi possível ler o arquivo XML: " + e.getMessage());
         }
@@ -144,6 +149,7 @@ public class Impressora {
                     xml, ASSINATURA_QR_CODE_CANCELAMENTO, 0),
                     "XML de cancelamento impresso com sucesso",
                     "Erro ao imprimir XML de cancelamento");
+            ImpressoraDLL.INSTANCE.Corte(5);
         } catch (IOException e) {
             System.out.println("Não foi possível ler o arquivo XML: " + e.getMessage());
         }
@@ -185,6 +191,7 @@ public class Impressora {
 
         mostrarResultado(ImpressoraDLL.INSTANCE.AvancaPapel(linhas),
                 "Papel avançado com sucesso", "Erro ao avançar o papel");
+        ImpressoraDLL.INSTANCE.Corte(5);
     }
 
     public void consultarStatus(int parametro) {
